@@ -1,4 +1,3 @@
-// src/swagger.js
 import swaggerJSDoc from 'swagger-jsdoc'
 
 const swaggerDefinition = {
@@ -10,8 +9,8 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: 'http://localhost:5050',
-      description: 'Local server'
+      url: 'https://skilltrade-api.onrender.com',
+      description: 'Render deployment'
     }
   ],
   components: {
@@ -32,7 +31,7 @@ const swaggerDefinition = {
 
 const options = {
   swaggerDefinition,
-  apis: ['./routes/*.js'] // ← Swagger leerá anotaciones desde los archivos de rutas
+  apis: ['./src/routes/*.js'] // Asegurate de tener todas las rutas documentadas con Swagger
 }
 
 const swaggerSpec = swaggerJSDoc(options)
