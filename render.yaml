@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: skilltrade-backend
+    env: node
+    region: south_america
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: npm run dev
+    envVars:
+      - key: PORT
+        value: 5050
+      - key: MONGO_URI
+        value: mongodb+srv://Medicenlucho:Luciano147896325@cluster0.dct9yai.mongodb.net/skilltrade?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET
+        value: miclaveultrasecreta
+      - key: EMAIL_HOST
+        value: smtp.tu-servidor.com
+      - key: EMAIL_PORT
+        value: 587
+      - key: EMAIL_USER
+        value: lucianomaxz2000@gmail.com
+      - key: EMAIL_PASS
+        value: tzkcjtkmwvoaojyr
